@@ -72,7 +72,7 @@ const editForm = async (req, res) => {
   if (emptyFields.length > 0) {
     return res.status(400).json({ error: "Please fill in all fields", emptyFields });
   }
-  res.status(200).json(form);
+  else{res.status(200).json(form);}
   }
   catch (error) {
     res.status(400).json({ error: error.message });
