@@ -6,7 +6,7 @@ function List() {
 
   useEffect(() => {
     const fetchForms = async () => {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/forms/");
+      const response = await fetch(`/forms/");
       const json = await response.json();
       if (response.ok) {
         setForms(json);
