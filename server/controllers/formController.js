@@ -64,13 +64,13 @@ const editForm = async (req, res) => {
   if (!agree) {
     emptyFields.push("agree");
   }
-  if (emptyFields.length > 0) {
-    return res.status(400).json({ error: "Please fill in all fields", emptyFields });
-  }
   try {
   const form = await Form.findOneAndUpdate({ _id: id }, { ...req.body });
   if (!form) {
     return res.status(400).json({ error: "No such form" });
+  }
+  if (emptyFields.length > 0) {
+    return res.status(400).json({ error: "Please fill in all fields", emptyFields });
   }
   res.status(200).json(form);
   }
