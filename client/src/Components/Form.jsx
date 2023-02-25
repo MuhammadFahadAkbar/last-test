@@ -10,7 +10,7 @@ const Form = () => {
 
   useEffect(() => {
     const fetchSectors = async () => {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/sectors/");
+      const response = await fetch(`/sectors/");
       const json = await response.json();
       if (response.ok) {
         setSectorOptions(json);
@@ -27,7 +27,7 @@ const Form = () => {
       sectors,
       agree,
     };
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/forms/", {
+    const response = await fetch(`/forms/", {
       method: "POST",
       body: JSON.stringify(entry),
       headers: {
