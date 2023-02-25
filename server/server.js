@@ -4,7 +4,8 @@ const cors = require("cors");
 require("dotenv").config();
 const formRoutes = require("./routes/forms");
 const sectorRoutes = require("./routes/sectors");
-const {MONGO_URI} = require("./config/keys")
+const {MONGO_URI} = require("./config/keys");
+const http = require('http');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -21,6 +22,8 @@ mongoose
   })
   .then(() => {
 
+  http.createServer(expressapp).listen(process.env.PORT, async ()=>{
+    
     if(process.env.NODE_ENV=='production'){
       const path = require('path')
 
@@ -30,8 +33,6 @@ mongoose
       res.sendFile(path.join(clientBuildPath, 'index.html'));
     })
     }
-
-    app.listen(80, () => {
       console.log(`Database Connected and Server is running on port: ${port}`);
     }); 
       
