@@ -13,7 +13,7 @@ function EditForm() {
 
   useEffect(() => {
     const fetchForm = async () => {
-      const response = await fetch(`/forms/${id}`);
+      const response = await fetch(`https://fahad-test-app-api.vercel.app/forms/${id}`);
       const json = await response.json();
       if (response.ok) {
         setForm(json);
@@ -22,7 +22,7 @@ function EditForm() {
       }
     };
     const fetchSectors = async () => {
-      const response = await fetch(`/sectors/");
+      const response = await fetch("https://fahad-test-app-api.vercel.app/sectors/");
       const json = await response.json();
       if (response.ok) {
         setSectorOptions(json);
@@ -34,7 +34,7 @@ function EditForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const response = await fetch(`/forms/${id}`, {
+    const response = await fetch(`https://fahad-test-app-api.vercel.app/forms/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, sectors }),
