@@ -44,6 +44,11 @@ function EditForm() {
       setError(json.error);
     }
     if (response.ok) {
+      setError(null);
+      setName("");
+      setSectors("");
+      setAgree(false);
+      console.log("new workout added:", json);
       navigate("/list");
     }
   };
