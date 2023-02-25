@@ -6,6 +6,7 @@ const formRoutes = require("./routes/forms");
 const sectorRoutes = require("./routes/sectors");
 const {MONGO_URI} = require("./config/keys");
 const http = require('http');
+const path = require('path')
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -24,15 +25,15 @@ mongoose
 
   http.createServer(app).listen(process.env.PORT, async ()=>{
     
-    if(process.env.NODE_ENV=='production'){
-      const path = require('path')
+//     if(process.env.NODE_ENV=='production'){
+      
 
     app.get('/', (req, res) => {
       const clientBuildPath = path.join(__dirname, '..', 'client', 'build');
       app.use(express.static(clientBuildPath));
       res.sendFile(path.join(clientBuildPath, 'index.html'));
     })
-    }
+//     }
       console.log(`Database Connected and Server is running on port: ${port}`);
     }); 
       
