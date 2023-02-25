@@ -131,7 +131,7 @@ function EditForm() {
             <Link to={`/list`}>BACK</Link>
           </button>
         </div>
-        {error && <div className="error">{error}</div>}
+        {error && <div className="mt-8 text-center text-red-500 py-3 px-5 bg-red-200 border border-red-500">{error}</div>}
       </form>
     </div>
   );
