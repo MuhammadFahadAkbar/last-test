@@ -10,7 +10,7 @@ const Form = () => {
 
   useEffect(() => {
     const fetchSectors = async () => {
-      const response = await fetch(`/sectors/");
+      const response = await fetch("https://fahad-test-app-api.vercel.app/sectors/");
       const json = await response.json();
       if (response.ok) {
         setSectorOptions(json);
@@ -27,7 +27,7 @@ const Form = () => {
       sectors,
       agree,
     };
-    const response = await fetch(`/forms/", {
+    const response = await fetch("https://fahad-test-app-api.vercel.app/forms/", {
       method: "POST",
       body: JSON.stringify(entry),
       headers: {
