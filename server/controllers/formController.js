@@ -52,7 +52,8 @@ const editForm = async (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(404).json({ error: "No such form" });
   }
-    let emptyFields = [];
+  const { name, sectors, agree } = req.body;
+  let emptyFields = [];
   if (!name) {
     emptyFields.push("name");
   }
