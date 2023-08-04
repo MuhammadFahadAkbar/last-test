@@ -18,7 +18,7 @@ function List() {
 
   if (!forms) {
     return (
-      <div className="text-center text-3xl text-green-600 mt-10">
+      <div className="text-center text-3xl text-red-900 mt-10">
         Loading...
       </div>
     );
