@@ -55,7 +55,7 @@ const Form = () => {
         onSubmit={handleSubmit}
         className="p-6 mx-auto shadow-custom border-[1px] md:p-12 md:max-w-screen-sm lg:max-w-screen-md"
       >
-        <h3 className="w-[98%] text-center m-auto font-semibold mb-5 md:text-center md:font-semibold md:text-xl md:mb-10 md:w-[80%] lg:text-2xl">
+        <h3 className="w-[98%] text-center m-auto font-semibold mb-5 md:text-center md:font-semibold md:text-xl md:mb-10 md:w-[80%] lg:text-2xl text-red-900">
           Please enter your name and pick the Sectors you are currently involved
           in.
         </h3>
@@ -67,7 +67,7 @@ const Form = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className=" w-[70%] ml-7 mb-5 border border-black rounded md:py-3 md:px-4 focus:outline-none focus:bg-white focus:border-green-600 md:ml-14 md:mb-8 md:w-[64%]"
+          className=" w-[70%] ml-7 mb-5 border border-black rounded md:py-3 md:px-4 focus:outline-none focus:bg-white focus:border-red-600 md:ml-14 md:mb-8 md:w-[64%]"
         />
         <br />
         <label htmlFor="sectors" className="text-lg  md:text-xl">
@@ -111,7 +111,7 @@ const Form = () => {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="py-3 px-20 text-lg bg-black text-white"
+            className="py-3 px-20 text-lg bg-red-900 text-white"
           >
             SUBMIT
           </button>
