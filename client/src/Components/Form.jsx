@@ -85,7 +85,7 @@ const Form = () => {
             );
             setSectors(selectedOptions);
           }}
-          className="w-[70%] ml-20 mb-5 border border-black rounded md:py-3 md:px-4 focus:outline-none focus:bg-white focus:border-green-600 md:ml-[7rem] md:mb-8 md:w-[64%]"
+          className="w-[70%] ml-20 mb-5 border border-black rounded md:py-3 md:px-4 focus:outline-none focus:bg-white focus:border-red-600 md:ml-[7rem] md:mb-8 md:w-[64%]"
         >
           {sectorOptions?.map((sector) => (
             <option key={sector.value} value={sector.text}>
